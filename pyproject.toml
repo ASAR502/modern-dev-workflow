@@ -1,0 +1,30 @@
+[project]
+name = "multiagent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ASAR502", email = "aaquibr502@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "ddgs>=9.16.1",
+    "google-adk>=2.11.0",
+    "google-genai>=2.28.0",
+    "langchain>=1.4.3",
+    "langchain-openai>=1.6.7",
+    "langgraph>=1.2.12",
+    "langgraph-supervisor>=0.0.31",
+    "litellm>=1.104.0",
+    "openai>=2.54.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+multiagent = "main"
+research = "multiagent.research.cli:main"
+check = "multiagent.check:main"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
